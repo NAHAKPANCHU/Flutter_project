@@ -26,13 +26,83 @@ class _HomepageState extends State<Homepage> {
             builder: (context) => Scaffold(
                   appBar: AppBar(
                     title: const Text('AnswerBook'),
-                    leading: IconButton(
-                      icon: Icon(Icons.menu),
-                      onPressed: () => {},
-                    ),
                     actions: [
                       IconButton(onPressed: () {}, icon: Icon(Icons.more_vert))
                     ],
+                  ),
+                  drawer: Drawer(
+                    child: ListView(
+                      padding: EdgeInsets.zero,
+                      children: [
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            DrawerHeader(
+                                child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                CircleAvatar(
+                                  child: Icon(Icons.person),
+                                ),
+                                Column(
+                                  children: const <Widget>[
+                                    Text(
+                                      '@username',
+                                      style: TextStyle(
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      '@panchunahak90@gmail.com',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            )),
+                          ],
+                        ),
+                        ListTile(
+                          title: Text('home'),
+                          leading: Icon(Icons.home),
+                          onTap: () => {},
+                        ),
+                        ListTile(
+                          title: Text('My Profile'),
+                          leading: Icon(Icons.person),
+                          onTap: () => {},
+                        ),
+                        ListTile(
+                          title: Text('History'),
+                          leading: Icon(Icons.history),
+                          onTap: () => {},
+                        ),
+                        ListTile(
+                          title: Text('My cart'),
+                          leading: Icon(Icons.shopping_cart),
+                          onTap: () => {},
+                        ),
+                        ListTile(
+                          title: Text('Share app'),
+                          leading: Icon(Icons.share),
+                          onTap: () => {},
+                        ),
+                        ListTile(
+                          title: Text('Rate us'),
+                          leading: Icon(Icons.star_rate_rounded),
+                          onTap: () => {},
+                        ),
+                        ListTile(
+                          title: Text('Log out'),
+                          leading: Icon(Icons.login_outlined),
+                          onTap: () => {},
+                        )
+                      ],
+                    ),
                   ),
                   body: ListView(children: <Widget>[
                     Column(
