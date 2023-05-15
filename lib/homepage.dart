@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'course.dart';
 
 class Homepage extends StatefulWidget {
   Homepage({super.key});
@@ -100,7 +101,14 @@ class _HomepageState extends State<Homepage> {
                           title: Text('Log out'),
                           leading: Icon(Icons.login_outlined),
                           onTap: () => {},
-                        )
+                        ),
+                        ListTile(
+                          title: Text('Close'),
+                          leading: Icon(Icons.close),
+                          onTap: () => {
+                            Navigator.pop(context),
+                          },
+                        ),
                       ],
                     ),
                   ),

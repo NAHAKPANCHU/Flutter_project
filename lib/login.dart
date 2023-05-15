@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                       ElevatedButton(
                         child: Text('Login'),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/home');
+                          Navigator.pushNamed(context, '/course');
                         },
                       ),
                     ],
